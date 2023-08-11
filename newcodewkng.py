@@ -42,7 +42,7 @@ with block:
     """
     )
     with gradio.Row():
-        message = gradio.Textbox(placeholder=messages)
+        message = gradio.Textbox(placeholder= "Type here", label= "Let's chat")
         chatbot = gradio.Chatbot()
         state = gradio.State()
         message.submit(message_and_history,
