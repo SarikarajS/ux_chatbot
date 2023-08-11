@@ -38,7 +38,6 @@ with block:
         """
     <div style="text-align:center;">
         <h1>Customer Service Assistant</h1>
-        <p>Ask any any complaint relaed queries</p>
     </div>
     """
     )
@@ -53,7 +52,7 @@ with block:
 
         gradio.HTML("""
         <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <img src='/file=female.jpg' style='width: 150px; height: 190px;'>
+        <img src='/file=assets/images/female.jpg' style='width: 150px; height: 190px;'>
         </div>
         <h2 style="text-align: center;">Liza</h2>  <!-- Display the chatbot's name -->
         """)
