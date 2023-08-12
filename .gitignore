@@ -1,3 +1,4 @@
 app.log
 config_data.py
 .vscode/settings.json
+.DS_Store
