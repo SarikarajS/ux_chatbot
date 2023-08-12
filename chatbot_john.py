@@ -49,7 +49,12 @@ with block:
                             inputs=[message, state],
                             outputs=[chatbot, state])
                 message.submit(lambda x: gradio.update(value=''), [], [message])
-            gradio.Button(link="https://docs.google.com/forms/d/e/1FAIpQLSdSxptIY5Z36TJV5um0_TllCxVqC2lT_dRlEvsPYp30Ao3H7Q/viewform", value="Feedback")
+            with gradio.Row():
+                gradio.HTML("""
+                <div style="display: flex; justify-content: center;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSxptIY5Z36TJV5um0_TllCxVqC2lT_dRlEvsPYp30Ao3H7Q/viewform">Feedback</a>
+                </div>
+                """)
 
         with gradio.Column():
             gradio.HTML("""
@@ -58,7 +63,6 @@ with block:
             </div>
             <h1 style="text-align: center;">John</h1>
             <h2 style="text-align:center;">Customer Service Assistant</h2>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSxptIY5Z36TJV5um0_TllCxVqC2lT_dRlEvsPYp30Ao3H7Q/viewform">Feedback</a>
             """)
         with gradio.Column():
             gradio.HTML("""""")
