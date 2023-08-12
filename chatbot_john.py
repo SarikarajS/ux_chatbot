@@ -52,7 +52,7 @@ with block:
 
         gradio.HTML("""
         <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <img src='/file=assets/images/male.JPG' style='width: 150px; height: 190px;'>
+        <img src='/file=assets/images/male.JPG' style='width: 160px; height: 190px;'>
         </div>
         <h2 style="text-align: center;">Liza</h2> 
         """)
