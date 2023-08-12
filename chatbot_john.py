@@ -57,19 +57,18 @@ with block:
                             text-align: center;
                             font-size: 20px;
                             text-decoration:none;
-                            background- white: #03ffed;
+                            background-color: #03ffed;
                             color: black;
                             padding: 6px 20px;
-                            border-radius: 10px;
-                            text-shadow: 0 1px 1px #ffffff, 0 2px 0 #999, 0 3px 0 #555, 0 7px 5px #7d7a7a;"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdSxptIY5Z36TJV5um0_TllCxVqC2lT_dRlEvsPYp30Ao3H7Q/viewform">Feedback Questionnaire</a>
+                            border-radius: 10px;"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdSxptIY5Z36TJV5um0_TllCxVqC2lT_dRlEvsPYp30Ao3H7Q/viewform">Go To Feedback Questionnaire</a>
                     </div>
                 """)
 
         with gradio.Column():
             gradio.HTML("""
             <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <img src='/file=assets/images/male.png' style='width: 165px; height: 190px;'>
+            <img src='/file=assets/images/male.png' style='width: 170px; height: 190px;'>
             </div>
             <h1 style="text-align: center;">John</h1>
             <h2 style="text-align:center;">Customer Service Assistant</h2>

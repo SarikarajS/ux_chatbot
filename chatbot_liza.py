@@ -49,6 +49,22 @@ with block:
                             inputs=[message, state],
                             outputs=[chatbot, state])
                 message.submit(lambda x: gradio.update(value=''), [], [message])
+        with gradio.Row():
+                gradio.HTML(""" 
+                    <div style="display: flex; justify-content: center;">
+                        <a style="
+                            width: 100%;
+                            text-align: center;
+                            font-size: 20px;
+                            text-decoration:none;
+                            background-color: #03ffed;
+                            color: black;
+                            padding: 6px 20px;
+                            border-radius: 10px;"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdSxptIY5Z36TJV5um0_TllCxVqC2lT_dRlEvsPYp30Ao3H7Q/viewform">Go To Feedback Questionnaire</a>
+                    </div>
+                """)
+
         with gradio.Column():
             gradio.HTML("""
             <div style="display: flex; justify-content: center; margin-top: 20px;">
