@@ -34,28 +34,31 @@ def message_and_history(input, history):
     return history, history
 
 
-block = gradio.Blocks(title="AI Chatbot", theme=gradio.themes.Monochrome())
+block = gradio.Blocks(title="AI Chatbot", theme='HaleyCH/HaleyCH_Theme')
 with block:
-    gradio.HTML("""
-    <div style="text-align:center;">
-        <h1>Customer Service Assistant</h1>
-    </div>
-    """)
     with gradio.Row():
-        message = gradio.Textbox(placeholder="type here", label="Let's chat")
-        chatbot = gradio.Chatbot()
-        state = gradio.State()
-        message.submit(message_and_history,
-                       inputs=[message, state],
-                       outputs=[chatbot, state])
-        message.submit(lambda x: gradio.update(value=''), [], [message])
-
-        gradio.HTML("""
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <img src='/file=assets/images/female.jpg' style='width: 150px; height: 190px;'>
-        </div>
-        <h2 style="text-align: center;">Liza</h2> 
-        """)
+        with gradio.Column():
+            gradio.HTML("""""")
+        with gradio.Column():
+            with gradio.Row():
+                chatbot = gradio.Chatbot()
+            with gradio.Row():
+                message = gradio.Textbox(placeholder="type here", label="Let's chat")
+                state = gradio.State()
+                message.submit(message_and_history,
+                            inputs=[message, state],
+                            outputs=[chatbot, state])
+                message.submit(lambda x: gradio.update(value=''), [], [message])
+        with gradio.Column():
+            gradio.HTML("""
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <img src='/file=assets/images/female.jpg' style='width: 150px; height: 190px;'>
+            </div>
+            <h1 style="text-align: center;">Liza</h1>
+            <h2 style="text-align:center;">Customer Service Assistant</h2>
+            """)
+        with gradio.Column():
+            gradio.HTML("""""")
 
 
 block.launch(debug=True, share=True)
