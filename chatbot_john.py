@@ -43,7 +43,7 @@ with block:
             with gradio.Row():
                 chatbot = gradio.Chatbot()
             with gradio.Row():
-                message = gradio.Textbox(placeholder="type here", label="Let's chat")
+                message = gradio.Textbox(placeholder="type here..Press enter to send", label="Let's chat")
                 state = gradio.State()
                 message.submit(message_and_history,
                             inputs=[message, state],
@@ -61,7 +61,7 @@ with block:
                             color: black;
                             padding: 6px 20px;
                             border-radius: 10px;"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdSxptIY5Z36TJV5um0_TllCxVqC2lT_dRlEvsPYp30Ao3H7Q/viewform">Go To Feedback Questionnaire</a>
+                        href="https://forms.gle/x887tYCMQW5kM13P6">Go To Survey</a>
                     </div>
                 """)
 
